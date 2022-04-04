@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ZAD</string>
+    <string name="action_settings">Settings</string>
+	<string name="welcomeBack">Welcome Back,</string>
+	<string name="signInContinue">Sign in to continue</string>
+	<string name="email">Email</string>
+	<string name="password">Password</string>
+	<string name="forgotPassword">Forgot Password"?"</string>
+	<string name="login">Login</string>
+	<string name="newUserQuestion">New user"?"</string>
+	<string name="signUp">Signup</string>
+	<string name="signIn">Sign in</string>
+	<string name="parkingInformation">Parking Information</string>
+	<string name="welcome">WELCOME TO</string>
+	<string name="zad">ZAD</string>
+	<string name="map">MAP</string>
+	<string name="list">LIST</string>
+</resources>

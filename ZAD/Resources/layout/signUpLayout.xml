@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size20">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size150"
+            android:theme="@style/Theme.AppCompat.Light"
+            app:logo="@drawable/zadlogoimage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayoutEmailSignUp"/>
+
+      
+        
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutEmailSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size150"
+            android:layout_marginHorizontal="@dimen/size20"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarSignUp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textInputLayoutPasswordSignUp">
+
+            <EditText
+                android:id="@+id/editTextEmailSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size60"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/colorBlack"
+                android:hint="@string/email"
+                android:imeOptions="actionNext"
+                android:backgroundTint="@color/colorGrey"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutPasswordSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size30"
+            android:layout_marginHorizontal="@dimen/size20"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmailSignUp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewForgotPasswordSignUp"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/editTextPasswordSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size60"
+                android:textColorHint="@color/colorBlack"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:backgroundTint="@color/colorGrey"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+      
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size70"
+            android:layout_marginHorizontal="20dp"
+            android:text="@string/signUp"
+            android:textAllCaps="false"
+            android:textSize="@dimen/scale20"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:background="@color/colorPurpleBlue"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPasswordSignUp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textViewNewUserQuestionSignUp"
+            android:layout_marginTop="@dimen/size50"/>
+
+        <TextView
+            android:id="@+id/textViewNewUserQuestionSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newUserQuestion"
+            android:layout_marginTop="@dimen/size50"
+            android:layout_marginBottom="@dimen/size30"
+            android:textSize="@dimen/scale20"
+            android:fontFamily="sans-serif"
+            app:layout_constraintTop_toBottomOf="@id/buttonSignUp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewSignInSignUp"
+            app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+        <TextView
+            android:id="@id/textViewSignInSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/signIn"
+            android:layout_marginTop="@dimen/size50"
+            android:layout_marginBottom="@dimen/size30"
+            android:textSize="@dimen/scale20"
+            android:textColor="@color/colorPurple"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/buttonSignUp"
+            app:layout_constraintStart_toStartOf="@+id/textViewNewUserQuestionSignUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

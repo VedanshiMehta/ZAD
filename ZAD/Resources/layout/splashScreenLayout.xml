@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorPurple">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="@dimen/size150"
+        android:layout_height="@dimen/size150"
+        android:src="@drawable/zadlogosplash"/>
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:layout_marginTop="@dimen/size15"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"/>
+
+    <TextView
+        android:id="@+id/textViewZAD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/scale40"
+        android:layout_marginTop="@dimen/size15"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:text="@string/zad"
+        android:fontFamily="serif-monospace"/>
+    
+</LinearLayout>
