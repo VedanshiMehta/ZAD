@@ -14,6 +14,7 @@ using ZAD.Model;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Android.App;
 
 namespace ZAD
 {
@@ -39,21 +40,31 @@ namespace ZAD
             _recyclerViewLocationList = view.FindViewById<RecyclerView>(Resource.Id.recycelerViewParkingInformation);
 
 
-              GetLocationData();
+
+            GetLocationData();
 
             _layoutManagerLocationList = new LinearLayoutManager(Activity);
             _recyclerViewLocationList.SetLayoutManager(_layoutManagerLocationList);
 
-          
+            
 
             return view;
 
-           
+
         }
+
+     
+        
+
 
         private async void GetLocationData()
         {
 
+
+            ProgressDialog progressDialog = new ProgressDialog(Activity);
+            progressDialog.SetMessage("Loading!.........");
+            progressDialog.SetProgressStyle(ProgressDialogStyle.Spinner);
+            progressDialog.Show();
 
             _locationList = new List<LocationDetails>();
 
@@ -80,5 +91,6 @@ namespace ZAD
             _locationListAdapter = new LocationListAdapter(_locationList);
             _recyclerViewLocationList.SetAdapter(_locationListAdapter);
         }
+
     }
 }
